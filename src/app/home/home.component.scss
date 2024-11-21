@@ -1,0 +1,293 @@
+.home-splash {
+  border-radius: 25px;
+  border: 1px solid #4a4a4a;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../public/the-chicane-splash-50.png');
+  background-color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+
+.home-logo img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.home-logo img:hover {
+  transform: scale(1.05);
+}
+
+.home-content-top-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home-content-top-row-item {
+  aspect-ratio: 2 / 1;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid #adadad;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.2s;
+  background-color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 50%;
+    transform: scale(1.05);
+  }
+}
+
+.home-content-top-row-item-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  text-wrap: wrap;
+}
+
+#seasons {
+  background-image: url('../../../public/1964-lotus-climax-25-398dfb-1024-50.jpg');
+}
+
+#constructors {
+  background-image: url('../../../public/ferrari-box-50.png');
+}
+
+#drivers {
+  background-image: url('../../../public/driver-50.png');
+}
+
+#circuits {
+  background-image: url('../../../public/circuit-50.png');
+}
+
+.outer-racing-stripe-container {
+  border-top: 1rem solid #d60000;
+  border-left: 1rem solid #d60000;
+  border-top-left-radius: 56px;
+}
+
+.inner-racing-stripe-container {
+  margin-top: 16px;
+  margin-left: 16px;
+  border-top: 0.25rem solid #d60000;
+  border-left: 0.25rem solid #d60000;
+  border-top-left-radius: 48px;
+}
+
+.home-content-second-row-news,
+.home-content-third-row-history,
+.home-content-fourth-row-standings {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+  padding-left: 24px;
+}
+
+.home-content-third-row-history {
+  padding-bottom: 36px;
+}
+
+.home-content-third-row-container {
+  background-color: #1d1f21;
+  border-radius: 24px;
+  color: #ffffff;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-left: calc(1.25rem + 16px);
+}
+
+.home-content-third-row-history-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.home-content-third-row-history-item {
+  flex-grow: 1;
+}
+
+.home-content-second-row-news-title,
+.home-content-third-row-history-title,
+.home-content-fourth-row-standings-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 4px solid #d60000;
+}
+
+.home-content-second-row-news-more-button,
+.home-content-third-row-history-more-button,
+.home-content-fourth-row-standings-more-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  transition: all ease-in-out 0.2s;
+
+  & a {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 600;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #d60000;
+    padding: 0.5rem 1rem;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.white {
+      color: #ffffff;
+    }
+  }
+}
+
+.forward-icon {
+  margin-left: 0.5rem;
+}
+
+:host ::ng-deep {
+  .p-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    height: 175px;
+    border-radius: 24px;
+  }
+
+  .p-card-header {
+    border-radius: 24px;
+    background-color: #d60000;
+
+    & img {
+      width: 175px;
+      margin-left: 24px;
+    }
+  }
+
+  .p-button:active,
+  .p-button:focus,
+  .p-button:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.home-content-fourth-row-standings-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.home-content-fourth-row-standings-drivers {
+  flex-grow: 1;
+}
+
+.home-content-fourth-row-standings-constructors {
+  flex-grow: 2;
+}
+
+.home-content-fourth-row-standings-drivers-title,
+.home-content-fourth-row-standings-constructors-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.driver-position,
+.constructor-position {
+  font-size: 6rem;
+  color: #ffffff;
+  margin-left: 20px;
+  font-style: italic;
+
+}
+
+.driver-card-image {
+  background-color: #ffffff;
+}
+
+.driver-details,
+.constructors-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1480px) {
+  .home-content-top-row {
+    justify-content: stretch;
+  }
+  .home-content-top-row-item {
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: none;
+    min-height: 175px;
+    width: auto;
+  }
+}
+
+@media (max-width: 1479px) {
+  .home-content-top-row-item {
+    aspect-ratio: 2 / 1;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 1137px) {
+  .home-content-top-row {
+    flex-direction: column;
+  }
+
+  .home-content-top-row-item {
+    aspect-ratio: 4 / 1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1048px) {
+  .home-splash {
+    aspect-ratio: unset;
+  }
+  .home-logo {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-splash {
+    display: none;
+  }
+}

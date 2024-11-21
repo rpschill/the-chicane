@@ -1,0 +1,44 @@
+<section class="circuits-view">
+  <div class="circuits-header">
+    <p class="circuits-header-title michroma-regular">CIRCUITS</p>
+  </div>
+
+  <div class="circuits-content">
+    <p-tabView>
+      <p-tabPanel header="Current Circuits">
+        @if (currentCircuits | async; as circuits ) {
+          <div class="circuits-cards">
+            @for (circuit of circuits; track circuit.circuitId) {
+              <p-card
+                class="circuits-card"
+                header="{{ circuit.circuitName }}"
+                subheader="{{ circuit.Location.locality }}, {{ circuit.Location.country }}"
+                [style]="{ marginBottom: '1rem' }"
+              >
+              <a class="p-button" href="{{ circuit.url }}" target="_blank">More Info</a>
+              </p-card>
+            }
+          </div>
+        }
+      </p-tabPanel>
+
+      <p-tabPanel header="All Circuits">
+        @if (allCircuits | async; as circuits) {
+          <div class="circuits-cards">
+            @for (circuit of circuits; track circuit.circuitId) {
+              <p-card
+                class="circuits-card"
+                header="{{ circuit.circuitName }}"
+                subheader="{{ circuit.Location.locality }}, {{ circuit.Location.country }}"
+                [style]="{ marginBottom: '1rem' }"
+              >
+                <a class="p-button" href="{{ circuit.url }}" target="_blank">More Info</a>
+
+              </p-card>
+            }
+          </div>
+        }
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</section>
