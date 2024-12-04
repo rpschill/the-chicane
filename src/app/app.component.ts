@@ -17,9 +17,11 @@ export class AppComponent {
   copyrightDate = new Date().getFullYear();
 
   menuItems = [
+    { label: 'F1 NEWS', route: 'news' },
     { label: 'SEASONS', route: 'seasons' },
     { label: 'DRIVERS', route: 'drivers' },
     { label: 'CONSTRUCTORS', route: 'constructors' },
     { label: 'CIRCUITS', route: 'circuits' },
+    { label: 'HISTORY', route: 'history' }
   ];
 }

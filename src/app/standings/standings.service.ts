@@ -21,7 +21,6 @@ export class StandingsService {
         map((drivers: any) => {
           drivers.forEach((driver: any) => {
             this.driversService.getDriverHeadshot(driver.Driver.code)
-              .pipe(take(1))
               .subscribe((headshot: any) => driver.headshot = headshot);
           })
 

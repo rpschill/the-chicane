@@ -1,44 +1,75 @@
 <section class="circuits-view">
-  <div class="circuits-header">
-    <p class="circuits-header-title michroma-regular">CIRCUITS</p>
-  </div>
 
-  <div class="circuits-content">
-    <p-tabView>
-      <p-tabPanel header="Current Circuits">
-        @if (currentCircuits | async; as circuits ) {
-          <div class="circuits-cards">
-            @for (circuit of circuits; track circuit.circuitId) {
-              <p-card
-                class="circuits-card"
-                header="{{ circuit.circuitName }}"
-                subheader="{{ circuit.Location.locality }}, {{ circuit.Location.country }}"
-                [style]="{ marginBottom: '1rem' }"
-              >
-              <a class="p-button" href="{{ circuit.url }}" target="_blank">More Info</a>
-              </p-card>
+  <div class="outer-racing-stripe-container">
+    <div class="inner-racing-stripe-container">
+
+      <div class="circuits-content">
+        <div class="circuits-header">
+          <p class="circuits-header-title michroma-regular">CIRCUITS</p>
+        </div>
+        <p-tabView>
+          <p-tabPanel header="Current Circuits">
+            @if (currentCircuits | async; as circuits ) {
+              <div class="circuits-cards">
+                @for (circuit of circuits; track circuit.round) {
+                  <div class="circuit-card-container">
+                    <p-card
+                      class="circuits-card"
+                      header="{{ circuit.raceName }}"
+                      subheader="{{ circuit.Circuit.Location.locality }}, {{ circuit.Circuit.Location.country }}"
+                      [style]="{ marginBottom: '1rem' }"
+                    >
+                      <ng-template pTemplate="header">
+                        <div class="round-number-container">
+                          <span class="round-text michroma-regular">ROUND</span>
+                          <span class="round-number michroma-regular">{{ circuit.round }}</span>
+                        </div>
+                      </ng-template>
+
+                      @if (circuit.image) {
+                        <img class="circuit-image" src="circuits/{{ circuit.image }}" alt="{{ circuit.meeting_name }}" />
+                      }
+                      @else {
+                        <img src="https://placehold.co/300" alt="Circuit Image" />
+                      }
+                    </p-card>
+                  </div>
+                }
+              </div>
             }
-          </div>
-        }
-      </p-tabPanel>
+          </p-tabPanel>
 
-      <p-tabPanel header="All Circuits">
-        @if (allCircuits | async; as circuits) {
-          <div class="circuits-cards">
-            @for (circuit of circuits; track circuit.circuitId) {
-              <p-card
-                class="circuits-card"
-                header="{{ circuit.circuitName }}"
-                subheader="{{ circuit.Location.locality }}, {{ circuit.Location.country }}"
-                [style]="{ marginBottom: '1rem' }"
-              >
-                <a class="p-button" href="{{ circuit.url }}" target="_blank">More Info</a>
-
-              </p-card>
-            }
-          </div>
-        }
-      </p-tabPanel>
-    </p-tabView>
+          <p-tabPanel header="All Circuits">
+            <ng-template pTemplate="content">
+              @if (allCircuits | async; as circuits) {
+                <!-- <div class="circuits-filter">
+                  <form [formGroup]="formGroup">
+                    <p-cascadeSelect
+                      formControlName="selectedSeason"
+                      [options]="seasonList"
+                      optionLabel="name"
+                      optionGroupLabel="name"
+                      [optionGroupChildren]="['years']"
+                      placeholder="Select a season"
+                      (onChange)="onSeasonChange($event)"
+                    ></p-cascadeSelect>
+                  </form>
+                </div> -->
+                <div class="circuits-cards">
+                  @for (circuit of circuits; track circuit.circuitId) {
+                    <p-card
+                      class="circuits-card"
+                      header="{{ circuit.circuitName }}"
+                      subheader="{{ circuit.Location.locality }}, {{ circuit.Location.country }}"
+                      [style]="{ marginBottom: '1rem' }"
+                    ></p-card>
+                  }
+                </div>
+              }
+            </ng-template>
+          </p-tabPanel>
+        </p-tabView>
+      </div>
+    </div>
   </div>
 </section>

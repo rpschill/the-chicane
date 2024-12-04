@@ -1,4 +1,4 @@
-.circuits-view {
+.circuits-content {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
@@ -10,11 +10,82 @@
 
 .circuits-header-title {
   font-size: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 4px solid #d60000;
 }
 
-.circuits-content {
-  border: 1px solid #4a4a4a;
-  border-radius: 25px;
-  background-color: #FFFFFF;
-  padding: 2rem;
+.circuits-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.circuit-image {
+  height: 200px;
+  background-image: #ffffff;
+}
+
+.outer-racing-stripe-container {
+  border-top: 1rem solid #d60000;
+  border-left: 1rem solid #d60000;
+  border-top-left-radius: 56px;
+}
+
+.inner-racing-stripe-container {
+  margin-top: 16px;
+  margin-left: 16px;
+  border-top: 0.25rem solid #d60000;
+  border-left: 0.25rem solid #d60000;
+  border-top-left-radius: 48px;
+}
+
+:host ::ng-deep {
+  .p-tabview-nav .p-highlight .p-tabview-nav-link .p-tabview-title {
+    color: #000000;
+  }
+
+  .p-tabview-nav .p-highlight .p-tabview-nav-link {
+    border-color: #d60000;
+  }
+
+  .p-card {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    border-radius: 24px;
+  }
+
+  .p-card-header {
+    background-color: #d60000;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+
+  .p-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.round-number-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.round-text {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-top: 4px;
+  margin-left: 8px;
+}
+
+.round-number {
+  font-size: 6rem;
+  color: #ffffff;
+  margin-left: 20px;
+  font-style: italic;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -3rem;
 }

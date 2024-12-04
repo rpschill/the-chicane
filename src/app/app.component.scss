@@ -66,8 +66,16 @@
 
 .copyright {
   font-weight: 600;
+  margin-top: 2rem;
 }
 
 .attribution-text {
   font-style: italic;
+}
+
+.disclaimer-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  margin-top: 3rem;
 }
