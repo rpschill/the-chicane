@@ -9,7 +9,7 @@ import { DriversService } from '../drivers/drivers.service';
 })
 export class StandingsService {
 
-  private apiUrl = 'http://ergast.com/api/f1';
+  private apiUrl = 'https://ergast.com/api/f1';
   private httpClient = inject(HttpClient);
   private driversService = inject(DriversService);
   private season = new Date().getFullYear();
