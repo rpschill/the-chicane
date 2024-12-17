@@ -5,7 +5,7 @@
     </a>
 
     <!-- Mobile menu button -->
-    <input class="side-menu" type="checkbox" id="side-menu" />
+    <input class="side-menu" type="checkbox" id="side-menu" [(ngModel)]="mobileMenuChecked" />
     <label class="hamb" for="side-menu">
       <span class="hamb-line"></span>
     </label>
@@ -15,7 +15,7 @@
       <ul class="header-menu">
         @for (menuItem of menuItems; track menuItem) {
           <li class="header-menu-item michroma-regular">
-            <a routerLink="/{{ menuItem.route }}" routerLinkActive="active">{{ menuItem.label }}</a>
+            <a routerLink="/{{ menuItem.route }}" routerLinkActive="active" (click)="onMobileNav()">{{ menuItem.label }}</a>
           </li>
         }
       </ul>

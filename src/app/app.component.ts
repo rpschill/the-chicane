@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   imports: [
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -15,6 +17,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'the-chicane';
   copyrightDate = new Date().getFullYear();
+  mobileMenuChecked = false;
 
   menuItems = [
     { label: 'F1 NEWS', route: 'news' },
@@ -24,4 +27,10 @@ export class AppComponent {
     { label: 'CIRCUITS', route: 'circuits' },
     { label: 'HISTORY', route: 'history' }
   ];
+
+  onMobileNav() {
+    if (this.mobileMenuChecked) {
+      this.mobileMenuChecked = false;
+    }
+  }
 }
