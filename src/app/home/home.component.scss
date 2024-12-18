@@ -109,6 +109,7 @@
 
 .home-content-third-row-history {
   padding-bottom: 36px;
+  padding-right: 24px;
 }
 
 .home-content-third-row-container {
@@ -315,9 +316,14 @@
     font-size: 0.55rem;
   }
 
-  .home-content-fourth-row-standings {
-    display: none;
+  .home-content-third-row-history-content {
+    flex-direction: column;
+    gap: 0;
   }
+
+  // .home-content-fourth-row-standings {
+  //   display: none;
+  // }
 
   .outer-racing-stripe-container,
   .inner-racing-stripe-container {
@@ -331,7 +337,8 @@
   }
 
   .home-content-second-row-news-title,
-  .home-content-third-row-history-title {
+  .home-content-third-row-history-title,
+  .home-content-fourth-row-standings-title {
     font-size: 2rem;
     margin-bottom: revert;
   }
@@ -341,8 +348,17 @@
   }
 
   :host ::ng-deep {
-    .p-card-header img {
-      display: none;
+    .p-card-header {
+      border-radius: 0;
+      background-color: #ffffff;
+      height: 110px;
+      width: 110px;
+
+      & img {
+        width: auto;
+        height: 100%;
+        margin-left: 0;
+      }
     }
 
     .p-card {
