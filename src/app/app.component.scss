@@ -24,6 +24,10 @@
 
 .header-menu-item {
   transition: transform 0.2s ease-in-out;
+
+  & .mobile-home {
+    display: none;
+  }
 }
 
 .header-menu-item a {
@@ -91,6 +95,10 @@
 
   .header-menu {
     flex-direction: column;
+  }
+
+  .header-menu-item.mobile-home {
+    display: block;
   }
 
   .nav {
@@ -166,9 +174,5 @@
   .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top: 0;
-  }
-
-  body:has(.side-menu:checked) {
-    overflow: hidden;
   }
 }

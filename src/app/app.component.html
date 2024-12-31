@@ -14,6 +14,7 @@
     <nav class="nav">
       <ul class="header-menu">
         @for (menuItem of menuItems; track menuItem) {
+          <!-- <li class="header-menu-item michroma-regular mobile-home">Home</li> -->
           <li class="header-menu-item michroma-regular">
             <a routerLink="/{{ menuItem.route }}" routerLinkActive="active" (click)="onMobileNav()">{{ menuItem.label }}</a>
           </li>

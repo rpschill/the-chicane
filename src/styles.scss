@@ -5,6 +5,10 @@
 
 html {
   background-color: #f0f0f0;
+
+  & :has(.side-menu:checked) {
+    overflow: hidden;
+  }
 }
 
 .michroma-regular {

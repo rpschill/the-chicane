@@ -347,6 +347,27 @@
     padding-left: 0;
   }
 
+  .home-content-fourth-row-standings-divider,
+  .home-content-fourth-row-standings-constructors {
+    display: none;
+  }
+
+  .home-content-fourth-row-standings {
+    padding: 0;
+  }
+
+  .home-content-fourth-row-standings-drivers-title,
+  .home-content-fourth-row-standings-constructors-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .driver-position {
+    font-size: 5rem;
+    color: #d60000;
+  }
+
   :host ::ng-deep {
     .p-card-header {
       border-radius: 0;
@@ -358,6 +379,10 @@
         width: auto;
         height: 100%;
         margin-left: 0;
+      }
+
+      & img.driver-card-image {
+        display: none;
       }
     }
 
