@@ -287,7 +287,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home-splash {
     // height: auto;
     // margin: 1rem 0;
@@ -369,6 +369,23 @@
   }
 
   :host ::ng-deep {
+    .home-content-second-row-news-item:first-of-type {
+      .p-element.home-content-second-row-news-card {
+        .p-card {
+          flex-direction: column;
+        }
+  
+        .p-card-header {
+          height: auto;
+          width: auto;
+  
+          & img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
     .p-card-header {
       border-radius: 0;
       background-color: #ffffff;
